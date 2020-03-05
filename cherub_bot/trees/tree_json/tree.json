@@ -1,0 +1,162 @@
+{
+	"type": "Parallel",
+	"name": "rootNode",
+	"childNodes": [
+		{
+			"type": "Init Jobs"
+		},
+		{
+			"type": "Supply Used",
+			"properties": [
+				{
+					"name": "Blackboard",
+					"value": "supply"
+				}
+			]
+		},
+		{
+			"type": "Sequence",
+			"childNodes": [
+				{
+					"type": "Sequence",
+					"decorators": [
+						{
+							"type": "One Shot"
+						}
+					],
+					"childNodes": [
+						{
+							"type": "Compare",
+							"properties": [
+								{
+									"name": "Blackboard",
+									"value": "supply"
+								},
+								{
+									"name": "Comparator",
+									"value": ">"
+								},
+								{
+									"name": "Constant",
+									"value": 13
+								}
+							]
+						},
+						{
+							"type": "Build",
+							"properties": [
+								{
+									"name": "Type",
+									"value": "SUPPLYDEPOT"
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "Sequence",
+					"decorators": [
+						{
+							"type": "One Shot"
+						}
+					],
+					"childNodes": [
+						{
+							"type": "Compare",
+							"properties": [
+								{
+									"name": "Blackboard",
+									"value": "supply"
+								},
+								{
+									"name": "Comparator",
+									"value": ">"
+								},
+								{
+									"name": "Constant",
+									"value": 15
+								}
+							]
+						},
+						{
+							"type": "Build",
+							"properties": [
+								{
+									"name": "Type",
+									"value": "BARRACKS"
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "Sequence",
+					"decorators": [
+						{
+							"type": "One Shot"
+						}
+					],
+					"childNodes": [
+						{
+							"type": "Build",
+							"properties": [
+								{
+									"name": "Type",
+									"value": "REFINERY"
+								}
+							]
+						}
+					]
+				},
+				{
+					"type": "Sequence",
+					"decorators": [
+						{
+							"type": "One Shot"
+						}
+					],
+					"childNodes": [
+						{
+							"type": "Compare",
+							"properties": [
+								{
+									"name": "Blackboard",
+									"value": "supply"
+								},
+								{
+									"name": "Comparator",
+									"value": ">"
+								},
+								{
+									"name": "Constant",
+									"value": 18
+								}
+							]
+						},
+						{
+							"type": "Build",
+							"properties": [
+								{
+									"name": "Type",
+									"value": "ORBITALCOMMAND"
+								}
+							]
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "Train",
+			"properties": [
+				{
+					"name": "Type",
+					"value": "SCV"
+				}
+			]
+		},
+		{
+			"type": "Manage Miners"
+		}
+	]
+}

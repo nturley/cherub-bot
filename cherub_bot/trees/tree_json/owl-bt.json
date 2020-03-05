@@ -1,0 +1,117 @@
+{
+    "nodes": [
+        {
+            "name": "Selector",
+            "icon": "question",
+            "isComposite": true
+        },
+        {
+            "name": "Parallel",
+            "icon": "align-justify",
+            "isComposite": true
+        },
+        {
+            "name": "Train",
+            "description": "{{Type}}",
+            "icon": "user",
+            "properties": [
+                {
+                    "name": "Type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "Init Jobs",
+            "icon":"id-badge"
+        },
+        {
+            "name": "Build",
+            "description": "{{Type}}",
+            "icon": "building",
+            "properties": [
+                {
+                    "name": "Type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "Sequence",
+            "icon": "arrow-right",
+            "isComposite": true
+        },
+        {
+            "name": "Pending",
+            "description": "{{Blackboard}} = pending {{Type}}",
+            "icon": "spinner",
+            "properties": [
+                {
+                    "name": "Blackboard",
+                    "type": "string"
+                },
+                {
+                    "name": "Type",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "Compare",
+            "description": "{{Blackboard}} {{Comparator}} {{Constant}}?",
+            "icon": "balance-scale",
+            "properties": [
+                {
+                    "name":"Blackboard",
+                    "type":"string"
+                },
+                {
+                    "name":"Comparator",
+                    "type":"enum",
+                    "values":[">","<"]
+                },
+                {
+                    "name":"Constant",
+                    "type":"number"
+                }
+            ]
+        },
+        {
+            "name": "Supply Left",
+            "description": "{{Blackboard}} = Supply Left",
+            "icon": "cutlery",
+            "properties": [
+                {
+                    "name": "Blackboard",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "Manage Miners",
+            "icon": "briefcase"
+        },
+        {
+            "name": "Supply Used",
+            "description": "{{Blackboard}} = Supply Used",
+            "icon": "cutlery",
+            "properties": [
+                {
+                    "name": "Blackboard",
+                    "type": "string"
+                }
+            ]
+        }
+    ],
+    "decorators": [
+        {
+            "name": "Invert",
+            "icon": "exchange"
+        },
+        {
+            "name": "One Shot",
+            "icon":"check-square"
+        }
+    ],
+    "services": []
+}

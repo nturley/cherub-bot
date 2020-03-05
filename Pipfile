@@ -1,0 +1,16 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+py-trees = "*"
+burnysc2 = "*"
+nest-asyncio = "*"
+cherub-bot = {editable = true,path = "."}
+names = "*"
+
+[requires]
+python_version = "3.7"
